@@ -1,4 +1,5 @@
 # My notes
+I didn't use jupyiter notebook
 The code is provided in the `lane_detect.py` file 
 
 
