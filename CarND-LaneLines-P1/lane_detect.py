@@ -8,10 +8,7 @@ import math
 import os
 from moviepy.editor import VideoFileClip
 from IPython.display import HTML
-
 import math
-
-# heyye uj
 
 def grayscale(img):
     """Applies the Grayscale transform
@@ -177,8 +174,6 @@ for img in img_list:
 
     line = hough_lines(cropped_img, rho=1, theta=np.pi / 180, threshold=35, min_line_len=5, max_line_gap=2)
 
-    #lines_img = weighted_img(img=line, initial_img=image, α=0.8, β=1., γ=0.)
-
     connected_lines_img = draw_lines(img=image, lines=lane_lines(image, line) )
 
     result = connected_lines_img
@@ -205,13 +200,13 @@ def process_image(image):
 
     line = hough_lines(cropped_img, rho=1, theta=np.pi / 180, threshold=35, min_line_len=5, max_line_gap=2)
 
-    #lines_img = weighted_img(img=line, initial_img=image, α=0.8, β=1., γ=0.)
-
     connected_lines_img = draw_lines(img=image, lines=lane_lines(image, line) )
 
     result = connected_lines_img
 
     return result
+
+## You need to comment out below code to process a video file and draw lines in the video
 
 # white_output = 'test_videos_output/solidWhiteRight.mp4'
 # ## To speed up the testing process you may want to try your pipeline on a shorter subclip of the video
